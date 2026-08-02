@@ -1,0 +1,77 @@
+date,description,category,amount,type
+2026-05-01,Payroll payment,Payroll,1834.64,expense
+2026-05-03,Marketing payment,Marketing,358.94,expense
+2026-05-04,Subscription Revenue - order #1003,Subscription Revenue,286.37,income
+2026-05-04,Software Tools payment,Software Tools,256.74,expense
+2026-05-05,Subscription Revenue - order #1004,Subscription Revenue,474.26,income
+2026-05-05,Logistics payment,Logistics,447.55,expense
+2026-05-06,Product Sales - order #1005,Product Sales,1146.9,income
+2026-05-06,Rent payment,Rent,909.64,expense
+2026-05-09,Consulting - order #1008,Consulting,556.27,income
+2026-05-12,Payroll payment,Payroll,1921.99,expense
+2026-05-13,Product Sales - order #1012,Product Sales,684.54,income
+2026-05-13,Software Tools payment,Software Tools,229.72,expense
+2026-05-14,Product Sales - order #1013,Product Sales,774.17,income
+2026-05-16,Subscription Revenue - order #1015,Subscription Revenue,319.22,income
+2026-05-16,Office Supplies payment,Office Supplies,162.6,expense
+2026-05-19,Product Sales - order #1018,Product Sales,800.34,income
+2026-05-19,Payroll payment,Payroll,2784.64,expense
+2026-05-20,Software Tools payment,Software Tools,234.34,expense
+2026-05-21,Payroll payment,Payroll,1865.55,expense
+2026-05-22,Software Tools payment,Software Tools,309.67,expense
+2026-05-23,Product Sales - order #1022,Product Sales,1168.67,income
+2026-05-24,Product Sales - order #1023,Product Sales,689.21,income
+2026-05-25,Rent payment,Rent,1114.77,expense
+2026-05-28,Subscription Revenue - order #1027,Subscription Revenue,443.61,income
+2026-05-29,Subscription Revenue - order #1028,Subscription Revenue,306.77,income
+2026-05-29,Marketing payment,Marketing,636.14,expense
+2026-05-30,Marketing payment,Marketing,403.6,expense
+2026-06-01,Subscription Revenue - order #1031,Subscription Revenue,426.15,income
+2026-06-01,Logistics payment,Logistics,409.45,expense
+2026-06-03,Product Sales - order #1033,Product Sales,640.52,income
+2026-06-05,Product Sales - order #1035,Product Sales,1104.13,income
+2026-06-06,Product Sales - order #1036,Product Sales,667.37,income
+2026-06-07,Marketing payment,Marketing,514.94,expense
+2026-06-08,Consulting - order #1038,Consulting,572.33,income
+2026-06-08,Marketing payment,Marketing,825.02,expense
+2026-06-09,Product Sales - order #1039,Product Sales,1167.38,income
+2026-06-10,Subscription Revenue - order #1040,Subscription Revenue,494.47,income
+2026-06-10,Payroll payment,Payroll,2316.57,expense
+2026-06-11,Product Sales - order #1041,Product Sales,668.34,income
+2026-06-12,Consulting - order #1042,Consulting,729.47,income
+2026-06-12,Payroll payment,Payroll,2423.05,expense
+2026-06-13,Product Sales - order #1043,Product Sales,1135.18,income
+2026-06-14,Subscription Revenue - order #1044,Subscription Revenue,758.08,income
+2026-06-14,Rent payment,Rent,1150.36,expense
+2026-06-15,Product Sales - order #1045,Product Sales,1023.7,income
+2026-06-16,Marketing payment,Marketing,655.1,expense
+2026-06-17,Payroll payment,Payroll,2132.17,expense
+2026-06-18,Product Sales - order #1048,Product Sales,764.9,income
+2026-06-19,Consulting - order #1049,Consulting,618.12,income
+2026-06-19,Office Supplies payment,Office Supplies,180.24,expense
+2026-06-21,Marketing payment,Marketing,600.48,expense
+2026-06-22,Product Sales - order #1052,Product Sales,834.65,income
+2026-06-23,Subscription Revenue - order #1053,Subscription Revenue,622.72,income
+2026-06-23,Office Supplies payment,Office Supplies,194.59,expense
+2026-06-25,Product Sales - order #1055,Product Sales,1153.1,income
+2026-06-26,Subscription Revenue - order #1056,Subscription Revenue,469.95,income
+2026-06-27,Consulting - order #1057,Consulting,476.68,income
+2026-06-28,Product Sales - order #1058,Product Sales,951.32,income
+2026-06-29,Product Sales - order #1059,Product Sales,1110.76,income
+2026-06-29,Software Tools payment,Software Tools,267.91,expense
+2026-06-30,Subscription Revenue - order #1060,Subscription Revenue,648.75,income
+2026-07-01,Subscription Revenue - order #1061,Subscription Revenue,539.66,income
+2026-07-01,Software Tools payment,Software Tools,220.0,expense
+2026-07-02,Subscription Revenue - order #1062,Subscription Revenue,475.86,income
+2026-07-02,Office Supplies payment,Office Supplies,194.65,expense
+2026-07-03,Product Sales - order #1063,Product Sales,773.21,income
+2026-07-05,Product Sales - order #1065,Product Sales,1080.22,income
+2026-07-07,Logistics payment,Logistics,351.85,expense
+2026-07-09,Product Sales - order #1069,Product Sales,687.8,income
+2026-07-10,Subscription Revenue - order #1070,Subscription Revenue,723.56,income
+2026-07-10,Software Tools payment,Software Tools,214.6,expense
+2026-07-11,Consulting - order #1071,Consulting,724.6,income
+2026-07-11,Marketing payment,Marketing,627.86,expense
+2026-07-12,Subscription Revenue - order #1072,Subscription Revenue,692.65,income
+2026-07-12,Logistics payment,Logistics,412.4,expense
+2026-07-13,Product Sales - order #1073,Product Sales,670.63,income
