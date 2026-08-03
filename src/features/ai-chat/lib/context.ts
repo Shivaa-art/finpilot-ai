@@ -26,6 +26,11 @@ export function buildChatContext(
     )
     .join("\n");
 
+  const categoryLines = state.categories
+    .slice(0, 10)
+    .map((c) => `- ${c.category} (${c.type}): $${Math.round(c.total).toLocaleString()} total, avg $${(c.total / Math.max(1, state.dataQuality.daySpan)).toFixed(2)}/day`)
+    .join("\n");
+
   return `You are FinPilot AI's financial assistant for "${companyName}". You explain and discuss the company's REAL, already-computed financial state below. Never invent numbers — only reference the figures given here. If asked something the data doesn't cover, say so plainly rather than guessing.
 
 CURRENT FINANCIAL STATE (computed by the Financial State Engine from real uploaded transactions):
@@ -40,8 +45,18 @@ CURRENT FINANCIAL STATE (computed by the Financial State Engine from real upload
 - Net profit: $${Math.round(state.netProfit).toLocaleString()}
 - Data basis: ${state.dataQuality.transactionCount} transactions over ${state.dataQuality.daySpan} days
 
+CATEGORY BREAKDOWN (use these dollar baselines to convert a hypothetical dollar amount into a % change when calling the simulateScenario tool):
+${categoryLines}
+
 CURRENT AI RECOMMENDATIONS (ranked by the Decision Optimisation Engine):
 ${recLines || "None generated this cycle."}
+
+WHEN THE USER ASKS A "WHAT IF" / HIRING / SPENDING QUESTION (e.g. "can I hire another developer at $65k/month?", "what if I cut marketing 20%?"):
+1. Identify the closest matching category from the breakdown above (e.g. hiring → Payroll).
+2. Convert the hypothetical dollar amount into a percentChange relative to that category's current total using the numbers given above. Show your conversion math briefly.
+3. Call the simulateScenario tool with that category, its type, and the percentChange.
+4. Explain the result in this shape: current baseline figure(s) → the hypothetical change → the effect on runway/cash position (before vs after) → the confidence score (${state.confidence}%, from the Financial State Engine, not invented) → a one-line recommendation.
+Never state a runway or cash-position number that didn't come from a simulateScenario tool call — always call the tool first for any what-if question.
 
 Answer conversationally and concisely. You may explain WHY a recommendation fired, compare it to alternatives, or help the user think through a decision — but you are not a substitute for professional financial/legal advice, and should say so if asked for something outside this scope (e.g. tax filing, legal structuring).`;
 }
