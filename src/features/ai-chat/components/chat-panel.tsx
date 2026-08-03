@@ -5,13 +5,12 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { Send, Loader2, Sparkles } from "lucide-react";
 
-export function ChatPanel({ context }: { context: string }) {
+export function ChatPanel() {
   const [input, setInput] = useState("");
 
   const { messages, sendMessage, status, error } = useChat({
     transport: new DefaultChatTransport({
       api: "/api/chat",
-      body: { context },
     }),
   });
 
@@ -34,8 +33,8 @@ export function ChatPanel({ context }: { context: string }) {
             </span>
             <p className="text-sm font-medium text-dark">Ask about your finances</p>
             <p className="max-w-xs text-xs text-muted">
-              This chat is grounded in your real Financial State — try &ldquo;Why is cash flow ranked #2?&rdquo; or
-              &ldquo;What happens if I cut Marketing spend?&rdquo;
+              This chat is grounded in your real Financial State and can run real scenario simulations — try
+              &ldquo;Can I hire another developer at $65k/month?&rdquo; or &ldquo;What if I cut Marketing 20%?&rdquo;
             </p>
           </div>
         )}
@@ -48,9 +47,22 @@ export function ChatPanel({ context }: { context: string }) {
                   m.role === "user" ? "bg-primary text-white" : "bg-background text-dark"
                 }`}
               >
-                {m.parts.map((part, i) =>
-                  part.type === "text" ? <span key={i}>{part.text}</span> : null
-                )}
+                {m.parts.map((part, i) => {
+                  if (part.type === "text") return <span key={i}>{part.text}</span>;
+                  if (part.type === "tool-simulateScenario") {
+                    return (
+                      <div key={i} className="mb-1.5 flex items-center gap-1.5 text-[11px] font-medium text-primary">
+                        <Sparkles className="h-3 w-3" />
+                        {"input" in part && part.input && typeof part.input === "object"
+                          ? `Simulated: ${(part.input as { category?: string }).category ?? "scenario"} ${
+                              (part.input as { percentChange?: number }).percentChange ?? ""
+                            }%`
+                          : "Running scenario simulation..."}
+                      </div>
+                    );
+                  }
+                  return null;
+                })}
               </div>
             </div>
           ))}
